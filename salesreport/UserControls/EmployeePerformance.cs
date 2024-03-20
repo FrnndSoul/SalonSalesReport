@@ -377,5 +377,30 @@ namespace salesreport.UserControls
                 MessageBox.Show("An error occurred while filtering data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            // Get the text entered in the search box
+            string searchText = searchBox.Text.ToLower();
+
+            // If the search box is empty, clear the filter
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                ((DataTable)EmployeeDGV.DataSource).DefaultView.RowFilter = "";
+                return;
+            }
+
+            // Build a filter expression to match any column containing the search text
+            string filterExpression = $"Convert(RefID, 'System.String') LIKE '%{searchText}%' OR " +
+                                       $"Convert([Date], 'System.String') LIKE '%{searchText}%' OR " +
+                                       $"Convert(EmployeeID, 'System.String') LIKE '%{searchText}%' OR " +
+                                       $"ServiceType LIKE '%{searchText}%' OR " +
+                                       $"Name LIKE '%{searchText}%' OR " +
+                                       $"Convert(Sales, 'System.String') LIKE '%{searchText}%' OR " +
+                                       $"Convert(Rating, 'System.String') LIKE '%{searchText}%'";
+
+            // Apply the filter to the DataGridView's DataSource
+            ((DataTable)EmployeeDGV.DataSource).DefaultView.RowFilter = filterExpression;
+        }
     }
 }
