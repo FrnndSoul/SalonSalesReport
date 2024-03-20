@@ -53,7 +53,7 @@
             this.GeneralBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
             this.GeneralBtn.Font = new System.Drawing.Font("Chinacat", 18F);
             this.GeneralBtn.ForeColor = System.Drawing.Color.Black;
-            this.GeneralBtn.Location = new System.Drawing.Point(41, 94);
+            this.GeneralBtn.Location = new System.Drawing.Point(136, 94);
             this.GeneralBtn.Name = "GeneralBtn";
             this.GeneralBtn.Size = new System.Drawing.Size(208, 99);
             this.GeneralBtn.TabIndex = 16;
@@ -74,7 +74,7 @@
             this.ServiceFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
             this.ServiceFilter.Font = new System.Drawing.Font("Chinacat", 18F);
             this.ServiceFilter.ForeColor = System.Drawing.Color.Black;
-            this.ServiceFilter.Location = new System.Drawing.Point(41, 718);
+            this.ServiceFilter.Location = new System.Drawing.Point(136, 721);
             this.ServiceFilter.Name = "ServiceFilter";
             this.ServiceFilter.Size = new System.Drawing.Size(208, 99);
             this.ServiceFilter.TabIndex = 15;
@@ -95,7 +95,7 @@
             this.EmployeeFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
             this.EmployeeFilter.Font = new System.Drawing.Font("Chinacat", 18F);
             this.EmployeeFilter.ForeColor = System.Drawing.Color.Black;
-            this.EmployeeFilter.Location = new System.Drawing.Point(41, 250);
+            this.EmployeeFilter.Location = new System.Drawing.Point(136, 243);
             this.EmployeeFilter.Name = "EmployeeFilter";
             this.EmployeeFilter.Size = new System.Drawing.Size(208, 99);
             this.EmployeeFilter.TabIndex = 14;
@@ -116,7 +116,7 @@
             this.ShipmentFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
             this.ShipmentFilter.Font = new System.Drawing.Font("Chinacat", 18F);
             this.ShipmentFilter.ForeColor = System.Drawing.Color.Black;
-            this.ShipmentFilter.Location = new System.Drawing.Point(41, 562);
+            this.ShipmentFilter.Location = new System.Drawing.Point(136, 563);
             this.ShipmentFilter.Name = "ShipmentFilter";
             this.ShipmentFilter.Size = new System.Drawing.Size(208, 99);
             this.ShipmentFilter.TabIndex = 13;
@@ -137,7 +137,7 @@
             this.ProductFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
             this.ProductFilter.Font = new System.Drawing.Font("Chinacat", 18F);
             this.ProductFilter.ForeColor = System.Drawing.Color.Black;
-            this.ProductFilter.Location = new System.Drawing.Point(41, 406);
+            this.ProductFilter.Location = new System.Drawing.Point(136, 397);
             this.ProductFilter.Name = "ProductFilter";
             this.ProductFilter.Size = new System.Drawing.Size(208, 99);
             this.ProductFilter.TabIndex = 18;
@@ -158,7 +158,7 @@
             this.BackBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
             this.BackBtn.Font = new System.Drawing.Font("Chinacat", 18F);
             this.BackBtn.ForeColor = System.Drawing.Color.Black;
-            this.BackBtn.Location = new System.Drawing.Point(50, 874);
+            this.BackBtn.Location = new System.Drawing.Point(146, 877);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(208, 99);
             this.BackBtn.TabIndex = 19;
@@ -176,7 +176,9 @@
             // employeePerformance1
             // 
             this.employeePerformance1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.employeePerformance1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeePerformance1.Location = new System.Drawing.Point(3, 3);
+            this.employeePerformance1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.employeePerformance1.Name = "employeePerformance1";
             this.employeePerformance1.Size = new System.Drawing.Size(1452, 879);
             this.employeePerformance1.TabIndex = 0;
