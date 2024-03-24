@@ -134,6 +134,12 @@
     <Compile Include="UserControls\GeneralReport.Designer.cs">
       <DependentUpon>GeneralReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ProductsSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProductsSales.Designer.cs">
+      <DependentUpon>ProductsSales.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GeneralReport.resx">
       <DependentUpon>GeneralReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ProductsSales.resx">
+      <DependentUpon>ProductsSales.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

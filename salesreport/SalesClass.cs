@@ -49,25 +49,66 @@ namespace salesreport
             }
 
             query += @"GROUP BY 
-                    er.CustomerID, er.TimeStart, se.AccountID, se.Name, er.CustomerRating, st.ServiceTypeName;";
+            er.CustomerID, er.TimeStart, se.AccountID, se.Name, er.CustomerRating, st.ServiceTypeName;";
 
             DataTable dataTable = new DataTable();
 
             using (MySqlConnection connection = new MySqlConnection(mysqlcon))
             {
                 connection.Open();
+
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
                     if (!string.IsNullOrEmpty(filter))
                     {
                         cmd.Parameters.AddWithValue("@serviceType", filter);
                     }
+
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
                     {
                         adapter.Fill(dataTable);
                     }
                 }
             }
+            return dataTable;
+        }
+
+        public static DataTable LoadProductSales()
+        {
+            string query = @"
+                SELECT 
+                    ProductGroupID AS `Reference Number`, 
+                    ProductName AS `Product Name`, 
+                    ProductID AS `Product ID`, 
+                    Quantity, 
+                    Amount, 
+                    DATE_FORMAT(OrderDate, '%m/%d/%Y') AS Date,
+                    IsVoided 
+                FROM 
+                    product_group";
+
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(mysqlcon))
+                {
+                    connection.Open();
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(dataTable);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error.");
+            }
+
             return dataTable;
         }
     }

@@ -34,9 +34,6 @@
             this.ShipmentFilter = new Guna.UI2.WinForms.Guna2Button();
             this.ProductFilter = new Guna.UI2.WinForms.Guna2Button();
             this.BackBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.employeePerformance1 = new salesreport.UserControls.EmployeePerformance();
-            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralBtn
@@ -59,6 +56,7 @@
             this.GeneralBtn.TabIndex = 16;
             this.GeneralBtn.Text = "General Report";
             this.GeneralBtn.UseTransparentBackground = true;
+            this.GeneralBtn.Click += new System.EventHandler(this.GeneralBtn_Click);
             // 
             // ServiceFilter
             // 
@@ -101,6 +99,7 @@
             this.EmployeeFilter.TabIndex = 14;
             this.EmployeeFilter.Text = "Employee Performance";
             this.EmployeeFilter.UseTransparentBackground = true;
+            this.EmployeeFilter.Click += new System.EventHandler(this.EmployeeFilter_Click);
             // 
             // ShipmentFilter
             // 
@@ -143,6 +142,7 @@
             this.ProductFilter.TabIndex = 18;
             this.ProductFilter.Text = "Products Sales Report";
             this.ProductFilter.UseTransparentBackground = true;
+            this.ProductFilter.Click += new System.EventHandler(this.ProductFilter_Click);
             // 
             // BackBtn
             // 
@@ -165,30 +165,11 @@
             this.BackBtn.Text = "Back";
             this.BackBtn.UseTransparentBackground = true;
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.employeePerformance1);
-            this.guna2Panel1.Location = new System.Drawing.Point(374, 94);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1452, 879);
-            this.guna2Panel1.TabIndex = 20;
-            // 
-            // employeePerformance1
-            // 
-            this.employeePerformance1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.employeePerformance1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeePerformance1.Location = new System.Drawing.Point(3, 3);
-            this.employeePerformance1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.employeePerformance1.Name = "employeePerformance1";
-            this.employeePerformance1.Size = new System.Drawing.Size(1452, 879);
-            this.employeePerformance1.TabIndex = 0;
-            // 
             // SalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.ProductFilter);
             this.Controls.Add(this.GeneralBtn);
@@ -197,7 +178,6 @@
             this.Controls.Add(this.ShipmentFilter);
             this.Name = "SalesForm";
             this.Size = new System.Drawing.Size(1920, 1080);
-            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -210,7 +190,5 @@
         private Guna.UI2.WinForms.Guna2Button ShipmentFilter;
         private Guna.UI2.WinForms.Guna2Button ProductFilter;
         private Guna.UI2.WinForms.Guna2Button BackBtn;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private UserControls.EmployeePerformance employeePerformance1;
     }
 }
