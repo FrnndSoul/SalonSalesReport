@@ -81,7 +81,7 @@ namespace salesreport
                     ProductName AS `Product Name`, 
                     ProductID AS `Product ID`, 
                     Quantity, 
-                    Amount, 
+                    Amount AS `Sales`, 
                     DATE_FORMAT(OrderDate, '%m/%d/%Y') AS Date,
                     IsVoided 
                 FROM 
