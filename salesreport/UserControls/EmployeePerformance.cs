@@ -21,8 +21,6 @@ namespace salesreport.UserControls
     {
         public static string mysqlcon = "server=153.92.15.3;user=u139003143_salondatabase;database=u139003143_salondatabase;password=M0g~:^GqpI";
         public MySqlConnection connection = new MySqlConnection(mysqlcon);
-        public static DataTable dataSource;
-        public static string ServiceTypeFilter;
 
         public EmployeePerformance()
         {
@@ -48,8 +46,7 @@ namespace salesreport.UserControls
                 string firstName = nameParts[0]; 
                 string salesValue = row.Cells["Sales"].Value?.ToString();
 
-                decimal sales;
-                if (decimal.TryParse(salesValue, out sales))
+                if (decimal.TryParse(salesValue, out decimal sales))
                 {
                     if (salesByEmployee.ContainsKey(firstName))
                     {
@@ -89,10 +86,9 @@ namespace salesreport.UserControls
                 string employeeName = row.Cells["Name"].Value?.ToString();
                 string[] nameParts = employeeName.Split(' '); 
                 string firstName = nameParts[0]; 
-                string ratingsValue = row.Cells["Rating"].Value?.ToString(); 
+                string ratingsValue = row.Cells["Rating"].Value?.ToString();
 
-                decimal ratings;
-                if (decimal.TryParse(ratingsValue, out ratings))
+                if (decimal.TryParse(ratingsValue, out decimal ratings))
                 {
                     if (ratesByEmployee.ContainsKey(firstName))
                     {
@@ -254,8 +250,7 @@ namespace salesreport.UserControls
 
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    DateTime timeTaken;
-                    if (DateTime.TryParseExact(row["Date"].ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out timeTaken) && timeTaken.Date == selectedDate)
+                    if (DateTime.TryParseExact(row["Date"].ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime timeTaken) && timeTaken.Date == selectedDate)
                     {
                         filteredTable.ImportRow(row);
                     }
@@ -307,8 +302,7 @@ namespace salesreport.UserControls
 
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    DateTime timeTaken;
-                    if (DateTime.TryParseExact(row["Date"].ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out timeTaken))
+                    if (DateTime.TryParseExact(row["Date"].ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime timeTaken))
                     {
                         // Extract the date part from timeTaken
                         DateTime datePart = timeTaken.Date;
@@ -354,8 +348,7 @@ namespace salesreport.UserControls
 
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    DateTime timeTaken;
-                    if (DateTime.TryParseExact(row["Date"].ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out timeTaken))
+                    if (DateTime.TryParseExact(row["Date"].ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime timeTaken))
                     {
                         if (timeTaken.Year == selectedDate.Year && timeTaken.Month == selectedDate.Month)
                         {
@@ -378,19 +371,16 @@ namespace salesreport.UserControls
             }
         }
 
-        private void searchBox_TextChanged(object sender, EventArgs e)
+        private void SearchBox_TextChanged(object sender, EventArgs e)
         {
-            // Get the text entered in the search box
             string searchText = searchBox.Text.ToLower();
 
-            // If the search box is empty, clear the filter
             if (string.IsNullOrWhiteSpace(searchText))
             {
                 ((DataTable)EmployeeDGV.DataSource).DefaultView.RowFilter = "";
                 return;
             }
 
-            // Build a filter expression to match any column containing the search text
             string filterExpression = $"Convert(RefID, 'System.String') LIKE '%{searchText}%' OR " +
                                        $"Convert([Date], 'System.String') LIKE '%{searchText}%' OR " +
                                        $"Convert(EmployeeID, 'System.String') LIKE '%{searchText}%' OR " +
@@ -399,7 +389,6 @@ namespace salesreport.UserControls
                                        $"Convert(Sales, 'System.String') LIKE '%{searchText}%' OR " +
                                        $"Convert(Rating, 'System.String') LIKE '%{searchText}%'";
 
-            // Apply the filter to the DataGridView's DataSource
             ((DataTable)EmployeeDGV.DataSource).DefaultView.RowFilter = filterExpression;
         }
     }

@@ -148,7 +148,7 @@ namespace salesreport.UserControls
             this.searchBox.SelectedText = "";
             this.searchBox.Size = new System.Drawing.Size(504, 42);
             this.searchBox.TabIndex = 2;
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            this.searchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // TypeFLP
             // 
