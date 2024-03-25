@@ -121,6 +121,7 @@
             this.ShipmentFilter.TabIndex = 13;
             this.ShipmentFilter.Text = "Shipment Report";
             this.ShipmentFilter.UseTransparentBackground = true;
+            this.ShipmentFilter.Click += new System.EventHandler(this.ShipmentFilter_Click);
             // 
             // ProductFilter
             // 

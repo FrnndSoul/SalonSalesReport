@@ -22,8 +22,9 @@ namespace salesreport.UserControls
             LoadCharts();
         }
 
-        private void ShowVoided_CheckedChanged(object sender, EventArgs e)
+        private async void ShowVoided_CheckedChanged(object sender, EventArgs e)
         {
+            await Task.Delay(500);
             string filterExpression;
             if (ShowVoided.Checked)
             {
@@ -148,9 +149,10 @@ namespace salesreport.UserControls
                 ProductSalesDGV.DataSource = filteredTable;
                 LoadCharts();
 
-                NoFilter.Checked = false;
-                WeeklyFilter.Checked = true;
-                MonthlyFilter.Checked = true;
+                NoFilter.Enabled = true;
+                DayFilter.Enabled = false;
+                WeeklyFilter.Enabled = false;
+                MonthlyFilter.Enabled = false;
                 RangeFilter.Enabled = false;
             }
             catch (Exception ex)
@@ -159,14 +161,16 @@ namespace salesreport.UserControls
             }
         }
 
-        private void NoFilter_Click(object sender, EventArgs e)
+        private async void NoFilter_Click(object sender, EventArgs e)
         {
+            await Task.Delay(500);
             ProductSalesDGV.DataSource = SalesClass.LoadProductSales();
             LoadCharts();
 
-            DayFilter.Checked = false;
-            WeeklyFilter.Checked = false;
-            MonthlyFilter.Checked = false;
+            NoFilter.Enabled = false;
+            DayFilter.Enabled = true;
+            WeeklyFilter.Enabled = true;
+            MonthlyFilter.Enabled = true;
             RangeFilter.Enabled = true;
         }
 
@@ -208,9 +212,10 @@ namespace salesreport.UserControls
                 ProductSalesDGV.DataSource = filteredTable;
                 LoadCharts();
 
-                DayFilter.Checked = true;
-                NoFilter.Checked = false;
-                MonthlyFilter.Checked = true;
+                NoFilter.Enabled = true;
+                DayFilter.Enabled = false;
+                WeeklyFilter.Enabled = false;
+                MonthlyFilter.Enabled = false;
                 RangeFilter.Enabled = false;
             }
             catch (Exception ex)
@@ -249,9 +254,10 @@ namespace salesreport.UserControls
                 ProductSalesDGV.DataSource = filteredTable;
                 LoadCharts();
 
-                NoFilter.Checked = false;
-                WeeklyFilter.Checked = true;
-                DayFilter.Checked = true;
+                NoFilter.Enabled = true;
+                DayFilter.Enabled = false;
+                WeeklyFilter.Enabled = false;
+                MonthlyFilter.Enabled = false;
                 RangeFilter.Enabled = false;
             }
             catch (Exception ex)

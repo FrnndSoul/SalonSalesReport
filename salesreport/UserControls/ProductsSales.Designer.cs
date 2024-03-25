@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SalesChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ProductSalesDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ShowVoided = new Guna.UI2.WinForms.Guna2ToggleSwitch();
@@ -64,26 +64,26 @@
             this.ProductSalesDGV.AllowUserToDeleteRows = false;
             this.ProductSalesDGV.AllowUserToResizeColumns = false;
             this.ProductSalesDGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.ProductSalesDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.ProductSalesDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.ProductSalesDGV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProductSalesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductSalesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.ProductSalesDGV.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ProductSalesDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ProductSalesDGV.DefaultCellStyle = dataGridViewCellStyle6;
             this.ProductSalesDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ProductSalesDGV.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.ProductSalesDGV.Location = new System.Drawing.Point(135, 154);
@@ -175,7 +175,6 @@
             this.MonthlyFilter.AutoRoundedCorners = true;
             this.MonthlyFilter.BorderRadius = 20;
             this.MonthlyFilter.BorderThickness = 1;
-            this.MonthlyFilter.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.MonthlyFilter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.MonthlyFilter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.MonthlyFilter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -196,7 +195,6 @@
             this.WeeklyFilter.AutoRoundedCorners = true;
             this.WeeklyFilter.BorderRadius = 20;
             this.WeeklyFilter.BorderThickness = 1;
-            this.WeeklyFilter.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.WeeklyFilter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.WeeklyFilter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.WeeklyFilter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -217,7 +215,6 @@
             this.DayFilter.AutoRoundedCorners = true;
             this.DayFilter.BorderRadius = 20;
             this.DayFilter.BorderThickness = 1;
-            this.DayFilter.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.DayFilter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DayFilter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DayFilter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -238,12 +235,11 @@
             this.NoFilter.AutoRoundedCorners = true;
             this.NoFilter.BorderRadius = 20;
             this.NoFilter.BorderThickness = 1;
-            this.NoFilter.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.NoFilter.Checked = true;
             this.NoFilter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.NoFilter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.NoFilter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.NoFilter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.NoFilter.Enabled = false;
             this.NoFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.NoFilter.Font = new System.Drawing.Font("Stanberry", 20.25F);
             this.NoFilter.ForeColor = System.Drawing.Color.Black;

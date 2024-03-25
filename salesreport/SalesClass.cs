@@ -82,7 +82,7 @@ namespace salesreport
                     ProductID AS `Product ID`, 
                     Quantity, 
                     Amount AS `Sales`, 
-                    DATE_FORMAT(OrderDate, '%m/%d/%Y') AS Date,
+                    DATE_FORMAT(`OrderDate`, '%m/%d/%Y') AS Date,
                     IsVoided 
                 FROM 
                     product_group";
@@ -108,7 +108,45 @@ namespace salesreport
             {
                 MessageBox.Show(ex.Message, "Error.");
             }
+            return dataTable;
+        }
 
+        public static DataTable LoadShipmentReport()
+        {
+            string query = @"
+                SELECT 
+                    `ManagerID`, 
+                    DATE_FORMAT(`Date Shipped`, '%m/%d/%Y') AS Date,
+                    `ShipmentID`, 
+                    `ItemID`, 
+                    `ItemName`, 
+                    `Quantity`, 
+                    `Cost`, 
+                    `Supplier` 
+                FROM 
+                    `shipments`";
+
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(mysqlcon))
+                {
+                    connection.Open();
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(dataTable);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error.");
+            }
             return dataTable;
         }
     }
