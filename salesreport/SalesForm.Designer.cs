@@ -78,6 +78,7 @@
             this.ServiceFilter.TabIndex = 15;
             this.ServiceFilter.Text = "Service Retention";
             this.ServiceFilter.UseTransparentBackground = true;
+            this.ServiceFilter.Click += new System.EventHandler(this.ServiceFilter_Click);
             // 
             // EmployeeFilter
             // 

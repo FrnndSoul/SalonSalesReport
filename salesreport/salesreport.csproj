@@ -140,6 +140,12 @@
     <Compile Include="UserControls\ProductsSales.Designer.cs">
       <DependentUpon>ProductsSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ServiceRetention.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ServiceRetention.Designer.cs">
+      <DependentUpon>ServiceRetention.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ShipmentReports.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ProductsSales.resx">
       <DependentUpon>ProductsSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ServiceRetention.resx">
+      <DependentUpon>ServiceRetention.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ShipmentReports.resx">
       <DependentUpon>ShipmentReports.cs</DependentUpon>

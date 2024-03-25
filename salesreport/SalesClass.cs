@@ -149,5 +149,59 @@ namespace salesreport
             }
             return dataTable;
         }
+
+        public static DataTable LoadServiceRetention(string filter)
+        {
+            string query = @"
+                SELECT 
+                    sg.ServiceGroupID AS `RefID`, 
+                    DATE_FORMAT(er.TimeStart, '%m/%d/%Y') AS Date, 
+                    st.ServiceTypeName AS `Service Type`, 
+                    sg.ServiceVariationID AS `Service ID`, 
+                    sg.ServiceVariation AS `Service Name`, 
+                    sg.Amount AS `Sales`, 
+                    sg.IsVoided 
+                FROM 
+                    `service_group` sg
+                INNER JOIN 
+                    `employee_records` er ON CAST(er.CustomerID AS CHAR CHARACTER SET utf8mb4) = CAST(sg.ServiceGroupID AS CHAR CHARACTER SET utf8mb4)
+                INNER JOIN 
+                    `salon_services` ss ON CAST(ss.ServiceName AS CHAR CHARACTER SET utf8mb4) = CAST(sg.ServiceVariation AS CHAR CHARACTER SET utf8mb4)
+                INNER JOIN 
+                    `service_type` st ON CAST(st.ServiceID AS CHAR CHARACTER SET utf8mb4) = CAST(ss.ServiceTypeID AS CHAR CHARACTER SET utf8mb4)";
+
+            if (!string.IsNullOrEmpty(filter))
+            {
+                query += " WHERE st.ServiceTypeName = @serviceTypename";
+            }
+
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(mysqlcon))
+                {
+                    connection.Open();
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        if (!string.IsNullOrEmpty(filter))
+                        {
+                            cmd.Parameters.AddWithValue("@serviceTypename", filter);
+                        }
+
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(dataTable);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error.");
+            }
+            return dataTable;
+        }
     }
 }

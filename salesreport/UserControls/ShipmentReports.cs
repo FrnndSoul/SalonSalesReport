@@ -19,6 +19,10 @@ namespace salesreport.UserControls
             InitializeComponent();
             ShipmentDGV.DataSource = SalesClass.LoadShipmentReport();
             LoadCharts();
+            RangeFilter.MaxDate = DateTime.Now;
+            RangeFilter.MinDate = DateTime.Now.AddYears(-2);
+            RangeFilter.Format = DateTimePickerFormat.Custom;
+            RangeFilter.CustomFormat = "dd/MM/yyyy";
         }
 
         public void LoadCharts()

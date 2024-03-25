@@ -17,6 +17,7 @@ namespace salesreport
         readonly EmployeePerformance employeePerformance = new EmployeePerformance();
         readonly ProductsSales productsSales = new ProductsSales();
         readonly ShipmentReports shipmentReports = new ShipmentReports();
+        readonly ServiceRetention serviceRetention = new ServiceRetention();
 
         public SalesForm()
         {
@@ -27,11 +28,12 @@ namespace salesreport
         {
             foreach (Control control in this.Controls)
             {
-                if(control is EmployeePerformance || control is ProductsSales || control is ShipmentReports)
+                if(control is EmployeePerformance || control is ProductsSales || control is ShipmentReports || control is ServiceRetention)
                 {
                     this.Controls.Remove(employeePerformance);
                     this.Controls.Remove(productsSales);
                     this.Controls.Remove(shipmentReports);
+                    this.Controls.Remove(serviceRetention);
                 }
             }
         }
@@ -88,6 +90,24 @@ namespace salesreport
                     ShowDefault();
                     this.Controls.Add(shipmentReports);
                     shipmentReports.Location = new Point(374, 94);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error.");
+            }
+        }
+
+        private async void ServiceFilter_Click(object sender, EventArgs e)
+        {
+            await Task.Delay(500);
+            try
+            {
+                if (!this.Controls.Contains(serviceRetention))
+                {
+                    ShowDefault();
+                    this.Controls.Add(serviceRetention);
+                    serviceRetention.Location = new Point(374, 94);
                 }
             }
             catch (Exception ex)
