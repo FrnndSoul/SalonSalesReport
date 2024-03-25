@@ -56,12 +56,6 @@ namespace salesreport
             }
         }
 
-        private async void GeneralBtn_Click(object sender, EventArgs e)
-        {
-            await Task.Delay(500);
-            ShowDefault();
-        }
-
         private async void ProductFilter_Click(object sender, EventArgs e)
         {
             await Task.Delay(500);

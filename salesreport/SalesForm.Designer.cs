@@ -28,35 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GeneralBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ServiceFilter = new Guna.UI2.WinForms.Guna2Button();
             this.EmployeeFilter = new Guna.UI2.WinForms.Guna2Button();
             this.ShipmentFilter = new Guna.UI2.WinForms.Guna2Button();
             this.ProductFilter = new Guna.UI2.WinForms.Guna2Button();
             this.BackBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
-            // 
-            // GeneralBtn
-            // 
-            this.GeneralBtn.Animated = true;
-            this.GeneralBtn.AutoRoundedCorners = true;
-            this.GeneralBtn.BackColor = System.Drawing.Color.Transparent;
-            this.GeneralBtn.BorderRadius = 48;
-            this.GeneralBtn.BorderThickness = 1;
-            this.GeneralBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.GeneralBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.GeneralBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.GeneralBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.GeneralBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
-            this.GeneralBtn.Font = new System.Drawing.Font("Chinacat", 18F);
-            this.GeneralBtn.ForeColor = System.Drawing.Color.Black;
-            this.GeneralBtn.Location = new System.Drawing.Point(136, 94);
-            this.GeneralBtn.Name = "GeneralBtn";
-            this.GeneralBtn.Size = new System.Drawing.Size(208, 99);
-            this.GeneralBtn.TabIndex = 16;
-            this.GeneralBtn.Text = "General Report";
-            this.GeneralBtn.UseTransparentBackground = true;
-            this.GeneralBtn.Click += new System.EventHandler(this.GeneralBtn_Click);
             // 
             // ServiceFilter
             // 
@@ -72,7 +49,7 @@
             this.ServiceFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
             this.ServiceFilter.Font = new System.Drawing.Font("Chinacat", 18F);
             this.ServiceFilter.ForeColor = System.Drawing.Color.Black;
-            this.ServiceFilter.Location = new System.Drawing.Point(136, 721);
+            this.ServiceFilter.Location = new System.Drawing.Point(136, 572);
             this.ServiceFilter.Name = "ServiceFilter";
             this.ServiceFilter.Size = new System.Drawing.Size(208, 99);
             this.ServiceFilter.TabIndex = 15;
@@ -94,7 +71,7 @@
             this.EmployeeFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
             this.EmployeeFilter.Font = new System.Drawing.Font("Chinacat", 18F);
             this.EmployeeFilter.ForeColor = System.Drawing.Color.Black;
-            this.EmployeeFilter.Location = new System.Drawing.Point(136, 243);
+            this.EmployeeFilter.Location = new System.Drawing.Point(136, 94);
             this.EmployeeFilter.Name = "EmployeeFilter";
             this.EmployeeFilter.Size = new System.Drawing.Size(208, 99);
             this.EmployeeFilter.TabIndex = 14;
@@ -116,7 +93,7 @@
             this.ShipmentFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
             this.ShipmentFilter.Font = new System.Drawing.Font("Chinacat", 18F);
             this.ShipmentFilter.ForeColor = System.Drawing.Color.Black;
-            this.ShipmentFilter.Location = new System.Drawing.Point(136, 563);
+            this.ShipmentFilter.Location = new System.Drawing.Point(136, 414);
             this.ShipmentFilter.Name = "ShipmentFilter";
             this.ShipmentFilter.Size = new System.Drawing.Size(208, 99);
             this.ShipmentFilter.TabIndex = 13;
@@ -138,7 +115,7 @@
             this.ProductFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
             this.ProductFilter.Font = new System.Drawing.Font("Chinacat", 18F);
             this.ProductFilter.ForeColor = System.Drawing.Color.Black;
-            this.ProductFilter.Location = new System.Drawing.Point(136, 397);
+            this.ProductFilter.Location = new System.Drawing.Point(136, 248);
             this.ProductFilter.Name = "ProductFilter";
             this.ProductFilter.Size = new System.Drawing.Size(208, 99);
             this.ProductFilter.TabIndex = 18;
@@ -174,7 +151,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.ProductFilter);
-            this.Controls.Add(this.GeneralBtn);
             this.Controls.Add(this.ServiceFilter);
             this.Controls.Add(this.EmployeeFilter);
             this.Controls.Add(this.ShipmentFilter);
@@ -185,8 +161,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button GeneralBtn;
         private Guna.UI2.WinForms.Guna2Button ServiceFilter;
         private Guna.UI2.WinForms.Guna2Button EmployeeFilter;
         private Guna.UI2.WinForms.Guna2Button ShipmentFilter;
