@@ -36,12 +36,12 @@ namespace salesreport
 
         private async void EmployeeFilter_Click(object sender, EventArgs e)
         {
-            ShowDefault();
             await Task.Delay(500);
             try
             {
                 if (!this.Controls.Contains(employeePerformance))
                 {
+                    ShowDefault();
                     this.Controls.Add(employeePerformance);
                     employeePerformance.Location = new Point(374, 94);
                 }
@@ -59,12 +59,12 @@ namespace salesreport
 
         private async void ProductFilter_Click(object sender, EventArgs e)
         {
-            ShowDefault();
             await Task.Delay(500);
             try
             {
                 if (!this.Controls.Contains(productsSales))
                 {
+                    ShowDefault();
                     this.Controls.Add(productsSales);
                     productsSales.Location = new Point(374, 94);
                 }
