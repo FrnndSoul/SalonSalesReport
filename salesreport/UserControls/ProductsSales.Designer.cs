@@ -157,7 +157,7 @@
             this.searchBox.SelectedText = "";
             this.searchBox.Size = new System.Drawing.Size(564, 42);
             this.searchBox.TabIndex = 10;
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            this.searchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // label2
             // 

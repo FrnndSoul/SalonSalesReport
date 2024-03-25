@@ -52,8 +52,9 @@ namespace salesreport
             }
         }
 
-        private void GeneralBtn_Click(object sender, EventArgs e)
+        private async void GeneralBtn_Click(object sender, EventArgs e)
         {
+            await Task.Delay(500);
             ShowDefault();
         }
 

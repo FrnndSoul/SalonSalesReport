@@ -260,7 +260,7 @@ namespace salesreport.UserControls
             }
         }
 
-        private void searchBox_TextChanged(object sender, EventArgs e)
+        private void SearchBox_TextChanged(object sender, EventArgs e)
         {
             string searchText = searchBox.Text.ToLower();
 
