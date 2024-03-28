@@ -115,41 +115,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SalesClass.cs" />
-    <Compile Include="SalesForm.cs">
+    <Compile Include="AnythingSales\SalesClass.cs" />
+    <Compile Include="AnythingSales\SalesForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SalesForm.Designer.cs">
+    <Compile Include="AnythingSales\SalesForm.Designer.cs">
       <DependentUpon>SalesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\EmployeePerformance.cs">
+    <Compile Include="AnythingSales\UserControls\EmployeePerformance.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\EmployeePerformance.Designer.cs">
+    <Compile Include="AnythingSales\UserControls\EmployeePerformance.Designer.cs">
       <DependentUpon>EmployeePerformance.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GeneralReport.cs">
+    <Compile Include="AnythingSales\UserControls\GeneralReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GeneralReport.Designer.cs">
+    <Compile Include="AnythingSales\UserControls\GeneralReport.Designer.cs">
       <DependentUpon>GeneralReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ProductsSales.cs">
+    <Compile Include="AnythingSales\UserControls\ProductsSales.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ProductsSales.Designer.cs">
+    <Compile Include="AnythingSales\UserControls\ProductsSales.Designer.cs">
       <DependentUpon>ProductsSales.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ServiceRetention.cs">
+    <Compile Include="AnythingSales\UserControls\ServiceRetention.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ServiceRetention.Designer.cs">
+    <Compile Include="AnythingSales\UserControls\ServiceRetention.Designer.cs">
       <DependentUpon>ServiceRetention.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ShipmentReports.cs">
+    <Compile Include="AnythingSales\UserControls\ShipmentReports.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ShipmentReports.Designer.cs">
+    <Compile Include="AnythingSales\UserControls\ShipmentReports.Designer.cs">
       <DependentUpon>ShipmentReports.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
@@ -165,22 +165,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SalesForm.resx">
+    <EmbeddedResource Include="AnythingSales\SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\EmployeePerformance.resx">
+    <EmbeddedResource Include="AnythingSales\UserControls\EmployeePerformance.resx">
       <DependentUpon>EmployeePerformance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GeneralReport.resx">
+    <EmbeddedResource Include="AnythingSales\UserControls\GeneralReport.resx">
       <DependentUpon>GeneralReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ProductsSales.resx">
+    <EmbeddedResource Include="AnythingSales\UserControls\ProductsSales.resx">
       <DependentUpon>ProductsSales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ServiceRetention.resx">
+    <EmbeddedResource Include="AnythingSales\UserControls\ServiceRetention.resx">
       <DependentUpon>ServiceRetention.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ShipmentReports.resx">
+    <EmbeddedResource Include="AnythingSales\UserControls\ShipmentReports.resx">
       <DependentUpon>ShipmentReports.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
